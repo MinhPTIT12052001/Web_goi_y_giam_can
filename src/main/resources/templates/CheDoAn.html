@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Basic -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- Mobile Metas -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!-- Site Metas -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<title>BMI</title>
+
+
+
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+<!-- progress barstle -->
+<link rel="stylesheet" href="/css/css-circular-prog-bar.css">
+<!-- fonts style -->
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap"
+	rel="stylesheet">
+<!-- font wesome stylesheet -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Custom styles for this template -->
+<link href="/css/style.css" rel="stylesheet" />
+<!-- Custom taskbar for this template -->
+<link href="/css/taskbar.css" rel="stylesheet" />
+<!-- responsive style -->
+<link href="/css/responsive.css" rel="stylesheet" />
+<link href="/css/Thi.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="/css/css-circular-prog-bar.css">
+
+
+
+<script src="/js/jquery-1.js"></script>
+<script src="/js/baiTestReading.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+	});
+</script>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="top_container ">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" th:href="@{/}">
+            <span>
+              KBS
+            </span>
+          </a>
+         
+				</nav>
+			</div>
+		</header>
+	</div>
+	<!-- end header section -->
+
+	<div id="resutlTest">
+		<div id="content" class="container-fluid fill ">
+			<form id="submitForm" name="submitForm" th:action="@{/chedotapluyen}"  >
+				<div class="row">
+					<div id="navigation" class="col-md-3">
+
+						
+
+
+					</div>
+
+					<div class="col-md-3 ">
+						<!-- Placeholder - keep empty -->
+					</div>
+
+					<!--Nội dung bài test -->
+					<div id="main" class="col-md-8 web-font">
+					
+						
+
+							<!-- show part5 -->
+
+
+							<div class="ncauhoi">
+									<b>Chế độ ăn giảm cân: <i style="color:red">[[${chedoan.ten}]]</i> </b>
+									<p th:text="${chedoan.moTa}"></p>
+									<br>
+									<table class="table table-bordered">
+									    <thead>
+									      <tr>
+									        
+									      </tr>
+									    </thead>
+									    <tbody>
+									      <tr th:each="cda:${menuchedoan}">
+									      	<th  th:text="${cda.ten}"></th>
+									        <td th:each="tp:${cda.listTP}" th:text="${tp.ten}+' ('+${tp.luong}+'g)' "></td>
+									        
+									      </tr>
+									      
+									    </tbody>
+									  </table>
+									 
+									<br>
+									<b>Note:</b>
+									
+									<p >  - Trên đây là bảng dinh dưỡng bạn cần nạp vào cơ thể trong một ngày. Với mỗi nhóm dinh dưỡng sẽ có nhiều nguyên liệu, hãy chọn 1 nguyên liệu với lượng tương ứng để tạo menu thực phẩm ăn trong ngày của mình</p>
+									<p th:text="'  - '+${chedoan.huongDan}"></p>
+								
+								
+									 
+									 
+							</div>
+							<br>
+
+
+
+
+						
+
+					</div>
+
+
+				</div>
+				
+				<input type="submit" class="btn btn-info" id="btnSubmitReading" value="Chế độ luyện tập"/>
+			</form>
+		</div>
+
+	</div>
+
+
+
+
+	<!-- footer section -->
+
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+</body>
+
+</html>

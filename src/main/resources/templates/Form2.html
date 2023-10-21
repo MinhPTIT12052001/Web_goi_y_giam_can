@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Basic -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- Mobile Metas -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!-- Site Metas -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<title>Form 2</title>
+
+
+
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+<!-- progress barstle -->
+<link rel="stylesheet" href="/css/css-circular-prog-bar.css">
+<!-- fonts style -->
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap"
+	rel="stylesheet">
+<!-- font wesome stylesheet -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Custom styles for this template -->
+<link href="/css/style.css" rel="stylesheet" />
+<!-- Custom taskbar for this template -->
+<link href="/css/taskbar.css" rel="stylesheet" />
+<!-- responsive style -->
+<link href="/css/responsive.css" rel="stylesheet" />
+<link href="/css/Thi.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="/css/css-circular-prog-bar.css">
+
+
+
+<script src="/js/jquery-1.js"></script>
+<script src="/js/baiTestReading.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+	});
+</script>
+
+
+</head>
+
+<body class="sub_page">
+
+  <div class="top_container ">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" th:href="@{/}">
+            <span>
+              KBS
+            </span>
+          </a>
+         
+				</nav>
+			</div>
+		</header>
+	</div>
+	<!-- end header section -->
+
+	<div id="resutlTest">
+		<div id="content" class="container-fluid fill ">
+			<form id="submitForm" name="submitForm" th:action="@{/xulyform2}" method="post" th:object="${form2}" th:field="${form2}">
+				<div class="row">
+					<div id="navigation" class="col-md-3">
+
+						
+
+
+					</div>
+
+					<div class="col-md-3 ">
+						<!-- Placeholder - keep empty -->
+					</div>
+
+					<!--Nội dung bài test -->
+					<div id="main" class="col-md-8 web-font">
+					
+						
+
+							<!-- show part5 -->
+
+							<b  style="color:red">[[${mes}]]</b>
+							
+							<div class="ncauhoi">
+								
+								
+								<p class="ncauhoi1">
+									<p class="cauhoi">
+										<b>Mục đích giảm cân của bạn là: </b>
+									</p>
+	
+	
+									<input class="part5" type="radio" th:name="mucdich"
+										th:id="mucdich" value="Cơ thể khỏe mạnh" th:field="*{mucdich}"
+										 /> Để có một cơ thể khỏe mạnh <br>
+									<input class="part5" type="radio" th:name="mucdich"
+										th:id="mucdich" value="Bệnh" th:field="*{mucdich}"
+										 /> Có bệnh và được khuyên nên giảm cân <br>
+									<input class="part5" type="radio" th:name="mucdich"
+										th:id="mucdich" value="Làm đẹp" th:field="*{mucdich}"
+										 /> Để làm đẹp, cơ thể thon gọn <br>
+									<input class="part5" type="radio" th:name="mucdich"
+										th:id="mucdich" value="Công việc" th:field="*{mucdich}"
+										 /> Do nhu cầu công việc cần giảm cân <br>
+									
+							
+								</p>
+								
+								<p class="ncauhoi1">
+									<p class="cauhoi">
+										<b>Gần đây bạn có hay bị stress: </b>
+									</p>
+	
+	
+									<input class="part5" type="radio" th:name="stress"
+										th:id="stress" value="nhiều" th:field="*{stress}"
+										 /> Thường xuyên <br>
+									<input class="part5" type="radio" th:name="stress"
+										th:id="stress" value="vừa" th:field="*{stress}"
+										 /> 1-2 lần/tuần <br>
+									<input class="part5" type="radio" th:name="stress"
+										th:id="stress" value="ít" th:field="*{stress}"
+										 /> Vài tuần 1 lần <br>
+									<input class="part5" type="radio" th:name="stress"
+										th:id="stress" value="không" th:field="*{stress}"
+										 /> Không <br>
+									
+							
+								</p>
+								
+								<p class="ncauhoi1">
+									<p class="cauhoi">
+										<b>Bạn có đang điều trị cao huyết áp hay tiền sử bị cao huyết áp không: </b>
+									</p>
+	
+	
+									<input class="part5" type="radio" th:name="huyetap"
+										th:id="huyetap" value="1" th:field="*{huyetap}"
+										 /> Có <br>
+									<input class="part5" type="radio" th:name="huyetap"
+										th:id="huyetap" value="0" th:field="*{huyetap}"
+										 />Không <br>
+									
+									
+							
+								</p>
+								
+								<p class="ncauhoi1">
+									<p class="cauhoi">
+										<b>Bạn có đang điều trị tiểu đường/ tim hay tiền sử bị tiểu đường/ tim không: </b>
+									</p>
+	
+	
+									<input class="part5" type="radio" th:name="tieuduongvatim"
+										th:id="tieuduongvatim" value="1" th:field="*{tieuduongvatim}"
+										 /> Có <br>
+									<input class="part5" type="radio" th:name="tieuduongvatim"
+										th:id="tieuduongvatim" value="0" th:field="*{tieuduongvatim}"
+										 />Không <br>
+									
+									
+							
+								</p>
+								
+								<p class="ncauhoi1">
+									<p class="cauhoi">
+										<b>Tình trạng thể chất hiện tại của bạn: </b>
+									</p>
+	
+	
+									<input class="part5" type="radio" th:name="thechat"
+										th:id="thechat" value="Bình thường" th:field="*{thechat}"
+										 /> Bình Thường, khỏe mạnh <br>
+									<input class="part5" type="radio" th:name="thechat"
+										th:id="thechat" value="Không tốt" th:field="*{thechat}"
+										 />Không tốt (ốm, có bệnh, chấn thương, ...) <br>
+									
+									
+							
+								</p>
+								
+								<p class="ncauhoi1">
+									<p class="cauhoi">
+										<b>Tốc độ giảm cân bạn mong muốn: </b>
+									</p>
+	
+	
+									<input class="part5" type="radio" th:name="tocdo"
+										th:id="tocdo" value="Nhanh" th:field="*{tocdo}"
+										 /> Nhanh(cần giảm cấp tốc) <br>
+									<input class="part5" type="radio" th:name="tocdo"
+										th:id="tocdo" value="Binh thuong" th:field="*{tocdo}"
+										 />Bình thường (tiêu chuẩn) <br>
+									<input class="part5" type="radio" th:name="tocdo"
+										th:id="tocdo" value="Cham" th:field="*{tocdo}"
+										 />Chậm (bắt đầu nhẹ nhàng) <br>
+									
+							
+								</p>
+								
+								<p class="ncauhoi1">
+									<p class="cauhoi">
+										<b>Bạn có hay rèn luyện thể thao không: </b>
+									</p>
+	
+	
+									<input class="part5" type="radio" th:name="level"
+										th:id="level" value="Mới" th:field="*{level}"
+										 /> Gần như không chơi hoặc chơi rất ít <br>
+									<input class="part5" type="radio" th:name="level"
+										th:id="level" value="Kinh nghiệm" th:field="*{level}"
+										 />Rèn luyện thể thao khá thường xuyên <br>
+									
+									
+							
+								</p>
+							</div>
+							<br>
+
+
+
+
+						
+
+					</div>
+
+
+				</div>
+				
+				<input type="submit" class="btn btn-info" id="btnSubmitReading" value="Next" />
+			</form>
+		</div>
+
+	</div>
+
+
+
+
+	<!-- footer section -->
+
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
